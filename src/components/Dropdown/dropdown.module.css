@@ -1,0 +1,42 @@
+.dropdown {
+  position: relative;
+  width: 15rem;
+}
+
+.selected {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.option,
+.selectedOption {
+  padding: 0.6rem 1rem;
+}
+
+.selectedOption {
+  font-weight: bold;
+}
+
+.selectedOption span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  .dropdown {
+    width: 12rem;
+  }
+}

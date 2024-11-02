@@ -1,0 +1,42 @@
+.header {
+  padding: 2rem 4rem;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.headerLineOne {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 2.4rem;
+  padding-top: 2rem;
+}
+
+.nav a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 2rem 1rem;
+  }
+  .nav {
+    display: none;
+  }
+}

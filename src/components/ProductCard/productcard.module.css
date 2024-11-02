@@ -1,0 +1,28 @@
+.productCard {
+  position: relative;
+  text-align: center;
+}
+
+.productCard h3 {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.productCard p {
+  font-size: 14px;
+  color: #666;
+}
+
+.imgContainer {
+  position: relative;
+  width: 80%;
+  height: 15rem;
+}
+
+@media (max-width: 480px) {
+  .imgContainer {
+    position: relative;
+    width: 80%;
+    height: 10rem;
+  }
+}

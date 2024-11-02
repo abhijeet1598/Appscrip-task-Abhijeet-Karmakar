@@ -1,0 +1,32 @@
+.filter {
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 1.4rem 0;
+}
+
+.filterCategory {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.filterOptions {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.6rem;
+}
+
+.filterOptions p {
+  color: #888;
+  text-decoration: underline;
+  margin-top: 0.5rem;
+}
+
+.filterCheckItems {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
