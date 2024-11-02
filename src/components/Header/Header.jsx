@@ -3,11 +3,20 @@ import React from "react";
 import styles from "./header.module.css";
 import { ChevronDown } from "lucide-react";
 
-const Header = () => {
+const Header = ({ handleSidebar }) => {
   return (
     <header className={styles.header}>
       <div className={styles.headerLineOne}>
         <div className="logo">
+          <Image
+            id="hamburger"
+            src={"/hamburger.png"}
+            alt="hamburger"
+            width={36}
+            height={36}
+            className="mobile-show"
+            onClick={handleSidebar}
+          />
           <Image src={"/Logo.png"} alt="brand logo" width={36} height={36} />
         </div>
         <h1 className={styles.logo}>LOGO</h1>

@@ -6,9 +6,11 @@ import Banner from "@/components/Banner/Banner";
 import Footer from "@/components/Footer/Footer";
 import Products from "@/components/Products/Products";
 import Hero from "@/components/Hero/Hero";
+import Sidebar from "@/components/Sidebar/Sidebar";
 
 const HomePage = () => {
   const [products, setProducts] = useState([]);
+  const [showSidebar, setShowSidebar] = useState(false);
 
   const getProducts = async () => {
     try {
@@ -31,6 +33,14 @@ const HomePage = () => {
     setProducts(updatedProducts);
   };
 
+  const handleSidebar = (e) => {
+    if (e.target.id === "hamburger") {
+      setShowSidebar(true);
+    } else {
+      setShowSidebar(false);
+    }
+  };
+
   useEffect(() => {
     getProducts();
   }, []);
@@ -38,7 +48,8 @@ const HomePage = () => {
   return (
     <div className="container">
       <Banner />
-      <Header />
+      <Header handleSidebar={handleSidebar} />
+      {showSidebar && <Sidebar handleSidebar={handleSidebar} />}
       <hr />
       <Hero />
       <Products products={products} handleProductLike={handleProductLike} />
